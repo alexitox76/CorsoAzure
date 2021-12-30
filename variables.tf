@@ -40,3 +40,13 @@ variable "live" {
   type    = string
   default = false
 }
+
+variable "app_service_plan_name" {
+  type        = string
+  description = "App Service Plan name"
+}
+
+variable "app_service_name" {
+  type        = string
+  description = "App Service name"
+}

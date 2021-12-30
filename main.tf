@@ -7,18 +7,9 @@ data "azurerm_resource_group" "resource_group" {
   name = var.resource_group
 }
 
-output "location_RG" {
-  value = data.azurerm_resource_group.resource_group.location
+data "azurerm_storage_account" "sa-tfstate" {
+  name                = "sademoalextfstate"
+  resource_group_name = "RGOrange-Test"
 }
-output "ID_RG" {
-  value = data.azurerm_resource_group.resource_group.id
-}
-output "RG_name" {
-  value = data.azurerm_resource_group.resource_group.name
-}
-output "RG_tags" {
-  value = data.azurerm_resource_group.resource_group.tags
-}
-
 
 
